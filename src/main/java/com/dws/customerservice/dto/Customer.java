@@ -7,20 +7,20 @@ public class Customer {
 	private String apellidos;
 	private String rfc;
 	private String correo;
-	private Region region;
+	private int id_Region;
 
 	public Customer() {
 		super();
 	}
 
-	public Customer(int id, String nombre, String apellidos, String rfc, String correo, Region region) {
+	public Customer(int id ,String nombre, String apellidos, String rfc, String correo ,int id_Region) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.rfc = rfc;
 		this.correo = correo;
-		this.region = region;
+		this.id_Region = id_Region;
 	}
 
 	public int getId() {
@@ -30,7 +30,7 @@ public class Customer {
 	public void setId(int id) {
 		this.id = id;
 	}
-
+	
 	public String getNombre() {
 		return nombre;
 	}
@@ -63,14 +63,14 @@ public class Customer {
 		this.correo = correo;
 	}
 
-	public Region getRegion() {
-		return region;
+	
+	public int getid_region() {
+		return id_Region;
 	}
 
-	public void setRegion(Region region) {
-		this.region = region;
+	public void setid_region(int id_Region) {
+		this.id_Region = id_Region;
 	}
-	
-	
+
 	
 }

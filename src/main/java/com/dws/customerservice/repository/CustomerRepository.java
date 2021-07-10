@@ -33,11 +33,15 @@ public class CustomerRepository {
 			customer.setRfc(rs.getString(4));
 			customer.setCorreo(rs.getString(5));
 			
-			Region region = new Region();
-			region.setId(rs.getInt(7));
-			region.setRegion(rs.getString(8));
+			customer.setid_region(rs.getInt(7));
 			
-			customer.setRegion(region); 
+			
+			//Region region = new Region();
+			//region.setId(rs.getInt(7));
+			//region.setRegion(rs.getString(8));
+			
+			//customer.setRegion(region); 
+			
 			
 			return customer;
 		}
@@ -60,11 +64,14 @@ public class CustomerRepository {
 			customer.setRfc(rs.getString(4));
 			customer.setCorreo(rs.getString(5));
 			
-			Region region = new Region();
-			region.setId(rs.getInt(7));
-			region.setRegion(rs.getString(8));
+			customer.setid_region(rs.getInt(7));
+			//Region region = new Region();
+			//region.setId(rs.getInt(7));
+			//region.setRegion(rs.getString(8));
+			//region.setId(rs.getInt(7));
 			
-			customer.setRegion(region); 
+			//customer.setRegion(region); 
+			 
 			
 			return customer;
 		}
@@ -80,7 +87,7 @@ public class CustomerRepository {
 				+ "'" + customer.getApellidos() + "',"
 				+ "'" + customer.getRfc() + "',"
 				+ "'" + customer.getCorreo() + "',"
-				+ "'" + customer.getRegion().getId() + "'"
+				+ "'" + customer.getid_region() + "'"
 				+ ");");
 		
 		RespuestaApi msg = new RespuestaApi();
@@ -94,7 +101,7 @@ public class CustomerRepository {
 				+ "apellidos = '" + customer.getApellidos() + "',"
 				+ "rfc = '" + customer.getRfc() + "',"
 				+ "correo = '" + customer.getCorreo() + "',"
-				+ "id_region = '" + customer.getRegion().getId() + "'"
+				+ "'" + customer.getid_region() + "'"
 				+ "WHERE id =  " + id + ";");
 		
 		RespuestaApi msg = new RespuestaApi();
